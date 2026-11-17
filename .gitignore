@@ -1,0 +1,13 @@
+# 원자료(EHT uvfits/csv)는 git에 넣지 않는다 (docs/DATA.md 참고)
+data/raw/
+data/cache/
+.venv/
+__pycache__/
+.pytest_cache/
+*.egg-info/
+results/chains/
+logs/
+results/stage6_ckpt/
+results/chains6/
+results/stage7_ckpt/
+results/chains7/

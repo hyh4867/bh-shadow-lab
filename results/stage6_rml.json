@@ -1,0 +1,70 @@
+{
+ "note": "reference only, no verdict (PREREGISTRATION 11.7)",
+ "results": {
+  "R0 (stage 4: min sets)": {
+   "chisq_cphase": 0.5178789166502302,
+   "chisq_logcamp": 0.5313395566734497,
+   "chi2_cp_per_closure": 0.6658099434142588,
+   "chi2_lca_per_closure": 47.64927094652988,
+   "n_cp_ours": 102,
+   "n_lca_ours": 86,
+   "n_cp": 70,
+   "n_lca": 70,
+   "n_lca_colocated": 47,
+   "centre": 0.001186462640482536,
+   "ridge_mean": 0.001249343252731817,
+   "ratio": 0.9496690664380777,
+   "ring": false,
+   "ring_diameter_from_image": null
+  },
+  "R1 (max sets)": {
+   "chisq_cphase": 0.5752766778467897,
+   "chisq_logcamp": 0.5483206480056934,
+   "chi2_cp_per_closure": 0.6825939971509665,
+   "chi2_lca_per_closure": 0.6650009554215502,
+   "n_cp_ours": 102,
+   "n_lca_ours": 86,
+   "n_cp": 176,
+   "n_lca": 354,
+   "n_lca_colocated": 120,
+   "centre": 0.0010594322715408511,
+   "ridge_mean": 0.0011560050129750944,
+   "ratio": 0.9164599285035073,
+   "ring": false,
+   "ring_diameter_from_image": null
+  },
+  "R2 (min sets, co-located lca removed)": {
+   "chisq_cphase": 0.5388693237132456,
+   "chisq_logcamp": 0.5310470042955997,
+   "chi2_cp_per_closure": 0.6931427799522931,
+   "chi2_lca_per_closure": 30.668693764557634,
+   "n_cp_ours": 102,
+   "n_lca_ours": 86,
+   "n_cp": 70,
+   "n_lca": 23,
+   "n_lca_colocated": 0,
+   "centre": 0.0011980451134906416,
+   "ridge_mean": 0.0012680326421927422,
+   "ratio": 0.9448062089465813,
+   "ring": false,
+   "ring_diameter_from_image": null
+  },
+  "R3 (max sets, co-located lca removed)": {
+   "chisq_cphase": 0.5836072425904356,
+   "chisq_logcamp": 0.55880737659356,
+   "chi2_cp_per_closure": 0.692487828937576,
+   "chi2_lca_per_closure": 0.6551101894766451,
+   "n_cp_ours": 102,
+   "n_lca_ours": 86,
+   "n_cp": 176,
+   "n_lca": 234,
+   "n_lca_colocated": 0,
+   "centre": 0.0010580629753341863,
+   "ridge_mean": 0.0012426816070477756,
+   "ratio": 0.8514352906918887,
+   "ring": false,
+   "ring_diameter_from_image": null
+  }
+ },
+ "candidate1": "부합하지 않음"
+}

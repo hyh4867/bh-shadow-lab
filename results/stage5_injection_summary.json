@@ -1,0 +1,106 @@
+{
+ "note": "추가 분석 (PREREGISTRATION 10.7)",
+ "corruption": {
+  "rw_step": 0.1,
+  "nonclosing_amp": 0.03,
+  "nonclosing_phase_deg": 3.0
+ },
+ "per": {
+  "RI1 2017-04-06 hi": {
+   "n": 20,
+   "d_ref": 42.0,
+   "bias": -0.024530497350788494,
+   "scatter": 0.1045084930869332,
+   "coverage_sigma_scaled": 0.4,
+   "sigma_scaled_median": 0.060515975836766364,
+   "chi2_nu_median": 4.184154529003829,
+   "chi2_nu_range": [
+    3.1545247437870714,
+    4.950075453545779
+   ],
+   "n_converged": 20,
+   "recovery": "양호",
+   "coverage_verdict": "과소평가"
+  },
+  "RI2 2017-04-06 hi": {
+   "n": 20,
+   "d_ref": 42.0,
+   "bias": -1.5971223426000591,
+   "scatter": 0.1008011955327729,
+   "coverage_sigma_scaled": 0.0,
+   "sigma_scaled_median": 0.06779426689688717,
+   "chi2_nu_median": 6.759795237720348,
+   "chi2_nu_range": [
+    5.083266791439719,
+    9.067342991610376
+   ],
+   "n_converged": 20,
+   "recovery": "불량",
+   "coverage_verdict": "과소평가"
+  },
+  "RI3 2017-04-06 hi": {
+   "n": 20,
+   "d_ref": 43.0,
+   "bias": 0.06074598227220207,
+   "scatter": 0.13263055216938732,
+   "coverage_sigma_scaled": 0.45,
+   "sigma_scaled_median": 0.08351079681167153,
+   "chi2_nu_median": 6.163167245720635,
+   "chi2_nu_range": [
+    4.997680475124778,
+    9.124862885548124
+   ],
+   "n_converged": 20,
+   "coverage_verdict": "과소평가"
+  },
+  "RI1 2017-04-10 hi": {
+   "n": 20,
+   "d_ref": 42.0,
+   "bias": -0.022924124976697158,
+   "scatter": 0.25920942823645493,
+   "coverage_sigma_scaled": 0.25,
+   "sigma_scaled_median": 0.1024617302862783,
+   "chi2_nu_median": 2.647812253613032,
+   "chi2_nu_range": [
+    1.9032701254263908,
+    3.7579970347427896
+   ],
+   "n_converged": 20,
+   "recovery": "양호",
+   "coverage_verdict": "과소평가"
+  },
+  "RI2 2017-04-10 hi": {
+   "n": 20,
+   "d_ref": 42.0,
+   "bias": -1.849559886509546,
+   "scatter": 0.18787362193133927,
+   "coverage_sigma_scaled": 0.0,
+   "sigma_scaled_median": 0.09718981634990692,
+   "chi2_nu_median": 4.258311003694842,
+   "chi2_nu_range": [
+    2.5660743077889667,
+    6.289519679556355
+   ],
+   "n_converged": 20,
+   "recovery": "불량",
+   "coverage_verdict": "과소평가"
+  },
+  "RI3 2017-04-10 hi": {
+   "n": 20,
+   "d_ref": 43.0,
+   "bias": -0.11601229323412099,
+   "scatter": 0.18120482739032495,
+   "coverage_sigma_scaled": 0.7,
+   "sigma_scaled_median": 0.14251401419525048,
+   "chi2_nu_median": 4.082808561966383,
+   "chi2_nu_range": [
+    3.188323859536596,
+    5.39804649633988
+   ],
+   "n_converged": 20,
+   "coverage_verdict": "적절"
+  }
+ },
+ "real_chi2_nu 2017-04-06 hi": 3.052340704516734,
+ "real_chi2_nu 2017-04-10 hi": 8.157562271083155
+}

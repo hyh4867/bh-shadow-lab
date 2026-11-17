@@ -1,0 +1,38 @@
+{
+ "note": "extra diagnostic, not pre-registered",
+ "ehtim_logcamp": {
+  "n": 70,
+  "median_sigma": 0.16215758630454313,
+  "median_abs_value": 0.15106358698541755
+ },
+ "ours_logcamp": {
+  "n": 86,
+  "median_sigma": 0.1167886650035212,
+  "median_abs_value": 0.8921134583827318
+ },
+ "ehtim_cphase": {
+  "n": 70,
+  "median_sigma_deg": 5.495777162397168
+ },
+ "ours_cphase": {
+  "n": 102,
+  "median_sigma_deg": 5.91367335649965
+ },
+ "ehtim_snr_of_scan_vis_min": 0.2640286159663881,
+ "ehtim_n_scan_vis": 194,
+ "ours_n_scan_vis_after_cuts": 186,
+ "colocated_quadrangles": {
+  "ehtim_min_set": {
+   "n": 47,
+   "of": 70,
+   "median_abs_value_colocated": 0.0892205014472237,
+   "median_abs_value_other": 1.1915451590405308
+  },
+  "ours": {
+   "n": 40,
+   "of": 86,
+   "median_abs_value_colocated": 0.07235040402263238,
+   "median_abs_value_other": 1.416142486218152
+  }
+ }
+}

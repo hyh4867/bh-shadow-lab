@@ -1,0 +1,3 @@
+# 선택: 교차 확인(ehtim)과 4단계(scikit-learn)
+ehtim==1.3.2
+scikit-learn==1.9.1

@@ -1,0 +1,10 @@
+[project]
+name = "bhshadow"
+version = "0.1.0"
+description = "Measure the M87* ring diameter from EHT 2017 public visibilities"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+markers = ["data: needs the downloaded EHT uvfits files in data/raw/uvfits"]

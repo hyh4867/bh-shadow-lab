@@ -1,0 +1,63 @@
+{
+ "note": "optional diagnosis, no verdict (PREREGISTRATION 10.9)",
+ "M3_params_2017_04_11_hi": [
+  41.93284505084499,
+  14.061466614482658,
+  0.2656171045190324,
+  184.75909866414722
+ ],
+ "D1_D2_D3": {
+  "RML (stage 4 settings)": {
+   "chisq_cphase": 0.5178789166502302,
+   "chisq_logcamp": 0.5313395566734497,
+   "chi2_cp_per_closure": 0.6658099434142588,
+   "chi2_lca_per_closure": 47.64927094652988,
+   "n_cp": 102,
+   "n_lca": 86,
+   "ring_diameter_from_image": 15.516471245114461
+  },
+  "M3 best fit (pixels)": {
+   "chisq_cphase": 23.85727388209152,
+   "chisq_logcamp": 4.57096335555756,
+   "chi2_cp_per_closure": 18.61307462969393,
+   "chi2_lca_per_closure": 7.113372488389242,
+   "n_cp": 102,
+   "n_lca": 86,
+   "ring_diameter_from_image": 38.31379117811279
+  },
+  "Gaussian 40 muas": {
+   "chisq_cphase": 472.7689153057181,
+   "chisq_logcamp": 104.3737278915014,
+   "chi2_cp_per_closure": 375.4711607259882,
+   "chi2_lca_per_closure": 277.94512141457295,
+   "n_cp": 102,
+   "n_lca": 86,
+   "ring_diameter_from_image": 0.10050251256281409
+  },
+  "D2: RML from M3 image": {
+   "chisq_cphase": 0.5959061595740663,
+   "chisq_logcamp": 0.5651404788171013,
+   "chi2_cp_per_closure": 0.7530167641104256,
+   "chi2_lca_per_closure": 22.739248844515668,
+   "n_cp": 102,
+   "n_lca": 86,
+   "ring_diameter_from_image": 31.697375767727536
+  },
+  "D3: RML, weights x10": {
+   "chisq_cphase": 0.4924253931580371,
+   "chisq_logcamp": 0.5236292944781628,
+   "chi2_cp_per_closure": 0.6484485158231015,
+   "chi2_lca_per_closure": 85.20407165941789,
+   "n_cp": 102,
+   "n_lca": 86,
+   "ring_diameter_from_image": 0.9491903964265774
+  }
+ },
+ "closure_counts": {
+  "ehtim_min_cphase": 70,
+  "ehtim_min_logcamp": 70,
+  "ours_cphase": 102,
+  "ours_logcamp": 86
+ },
+ "M3_analytic_chi2_nu_stage2": 8.328946647857835
+}

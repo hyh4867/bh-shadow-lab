@@ -1,0 +1,9 @@
+{
+ "dataset": "2017-04-11 hi",
+ "chi2_cphase": 0.5178789166502302,
+ "chi2_logcamp": 0.5313395566734497,
+ "npix": 48,
+ "fov_muas": 160,
+ "ring_diameter_from_image_muas": 15.516471245114461,
+ "note": "reference only; settings fixed before looking at the image; not used for any verdict"
+}

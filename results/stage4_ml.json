@@ -1,0 +1,52 @@
+{
+ "pre_registration": "7.5",
+ "n_train": 20000,
+ "per_coverage": {
+  "2017-04-06 hi": {
+   "n_features": 407,
+   "train_time_s": 159.91479921340942,
+   "val_score_r2": 0.9945962260768935,
+   "test": {
+    "n": 60,
+    "rmse_ml": 0.4673591659734699,
+    "rmse_mcmc": 0.02509501924944958,
+    "bias_ml": -0.12725937542430732,
+    "bias_mcmc": 0.003753245777105126,
+    "rmse_ratio_ml_over_mcmc": 18.62358268498721,
+    "verdict": "MCMC\uac00 \ub098\uc74c"
+   },
+   "extra_offset_crescent": {
+    "n": 10,
+    "rmse_ml": 0.3897794735166803,
+    "rmse_mcmc": 0.0679099493344053,
+    "bias_ml": -0.35127555491067286,
+    "bias_mcmc": 0.061711303969452305
+   },
+   "real_data_ml_d": 42.062081502218184,
+   "real_data_mcmc_M3_d": 41.35081236457465
+  },
+  "2017-04-10 hi": {
+   "n_features": 152,
+   "train_time_s": 49.95908975601196,
+   "val_score_r2": 0.9926776321878624,
+   "test": {
+    "n": 60,
+    "rmse_ml": 0.6791288419357608,
+    "rmse_mcmc": 0.06406398665552471,
+    "bias_ml": -0.03978129282669975,
+    "bias_mcmc": 0.010654317600437224,
+    "rmse_ratio_ml_over_mcmc": 10.600789576013602,
+    "verdict": "MCMC\uac00 \ub098\uc74c"
+   },
+   "extra_offset_crescent": {
+    "n": 10,
+    "rmse_ml": 0.3032557322646773,
+    "rmse_mcmc": 0.09109621394546465,
+    "bias_ml": 0.21772725345640823,
+    "bias_mcmc": 0.06906564321668754
+   },
+   "real_data_ml_d": 43.3979573877832,
+   "real_data_mcmc_M3_d": 40.9574878750775
+  }
+ }
+}

@@ -1,0 +1,156 @@
+{
+ "datasets": [
+  {
+   "dataset": "2017-04-05 lo",
+   "n_10s": 6453,
+   "n_scans": 18,
+   "n_scanavg_used": 146,
+   "n_cphase": 78,
+   "n_logcamp": 60,
+   "stations": [
+    "AA",
+    "AP",
+    "AZ",
+    "JC",
+    "LM",
+    "PV",
+    "SM"
+   ],
+   "rho_max_glambda": 8.260704471963928
+  },
+  {
+   "dataset": "2017-04-05 hi",
+   "n_10s": 6458,
+   "n_scans": 18,
+   "n_scanavg_used": 144,
+   "n_cphase": 76,
+   "n_logcamp": 58,
+   "stations": [
+    "AA",
+    "AP",
+    "AZ",
+    "JC",
+    "LM",
+    "PV",
+    "SM"
+   ],
+   "rho_max_glambda": 8.331157736959565
+  },
+  {
+   "dataset": "2017-04-06 lo",
+   "n_10s": 8645,
+   "n_scans": 25,
+   "n_scanavg_used": 234,
+   "n_cphase": 133,
+   "n_logcamp": 109,
+   "stations": [
+    "AA",
+    "AP",
+    "AZ",
+    "JC",
+    "LM",
+    "PV",
+    "SM"
+   ],
+   "rho_max_glambda": 8.261439140155165
+  },
+  {
+   "dataset": "2017-04-06 hi",
+   "n_10s": 9081,
+   "n_scans": 25,
+   "n_scanavg_used": 243,
+   "n_cphase": 139,
+   "n_logcamp": 114,
+   "stations": [
+    "AA",
+    "AP",
+    "AZ",
+    "JC",
+    "LM",
+    "PV",
+    "SM"
+   ],
+   "rho_max_glambda": 8.334174471731341
+  },
+  {
+   "dataset": "2017-04-10 lo",
+   "n_10s": 2367,
+   "n_scans": 7,
+   "n_scanavg_used": 80,
+   "n_cphase": 48,
+   "n_logcamp": 41,
+   "stations": [
+    "AA",
+    "AP",
+    "AZ",
+    "JC",
+    "LM",
+    "PV",
+    "SM"
+   ],
+   "rho_max_glambda": 8.237625511802296
+  },
+  {
+   "dataset": "2017-04-10 hi",
+   "n_10s": 2610,
+   "n_scans": 7,
+   "n_scanavg_used": 84,
+   "n_cphase": 50,
+   "n_logcamp": 44,
+   "stations": [
+    "AA",
+    "AP",
+    "AZ",
+    "JC",
+    "LM",
+    "PV",
+    "SM"
+   ],
+   "rho_max_glambda": 8.310008599888173
+  },
+  {
+   "dataset": "2017-04-11 lo",
+   "n_10s": 7447,
+   "n_scans": 22,
+   "n_scanavg_used": 178,
+   "n_cphase": 96,
+   "n_logcamp": 80,
+   "stations": [
+    "AA",
+    "AP",
+    "AZ",
+    "JC",
+    "LM",
+    "PV",
+    "SM"
+   ],
+   "rho_max_glambda": 7.156381684777452
+  },
+  {
+   "dataset": "2017-04-11 hi",
+   "n_10s": 8058,
+   "n_scans": 22,
+   "n_scanavg_used": 186,
+   "n_cphase": 102,
+   "n_logcamp": 86,
+   "stations": [
+    "AA",
+    "AP",
+    "AZ",
+    "JC",
+    "LM",
+    "PV",
+    "SM"
+   ],
+   "rho_max_glambda": 8.325685495542611
+  }
+ ],
+ "ehtim_closure_phase_check": {
+  "status": "ok",
+  "dataset": "2017-04-11 hi",
+  "n_matched": 4008,
+  "n_mine": 4008,
+  "max_abs_diff_deg": 6.3434197284552325e-06,
+  "median_abs_diff_deg": 1.0122533071420599e-06
+ }
+}
