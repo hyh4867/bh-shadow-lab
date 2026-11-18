@@ -35,6 +35,13 @@ uv pip install --python .venv/bin/python -r requirements-optional.txt  # 선택:
 .venv/bin/python scripts/run_stage6_proc_diag.py   # 사전 등록 밖 진단: 10초 변형에서 M3와 E1 비교. 약 2분
 .venv/bin/python scripts/run_stage6_summary.py     # 6단계 요약 그림(넓은 판, 좁은 판)
 # scripts/run_stage6_queue.sh 는 models가 끝난 뒤 tau → systematics → xsring → 2018 → rml을 차례로 돌린다
+# 7단계(추가 분석, PREREGISTRATION 12절, 큰 모형 수렴). 한 번에 하나씩, screen + caffeinate -i 권장.
+# nested 요약은 results/stage7_fits/, 체크포인트는 results/stage7_ckpt/, 표본은 results/chains7/(둘 다 git 제외)
+.venv/bin/python scripts/run_stage7_modemap.py     # 차등 진화 최적화 7모형 × 시드 12개(프로세스 4개). 약 45분
+.venv/bin/python scripts/run_stage7_models.py      # 래더 A: G1 nlive 50k → 150k(12.2). 약 3시간 20분
+.venv/bin/python scripts/run_stage7b.py            # 래더 B: slices 5(3+k), G1 nlive 300 × 5회 → (실패 시) nlive 800 × 5회(12.7)
+.venv/bin/python scripts/run_stage7_select.py      # C1–C4 표, 중심 모형, σ_model, 예산, 질량(새 fit 없음)
+# scripts/run_stage7_queue.sh 는 modemap → models → select, scripts/run_stage7b_queue.sh 는 stage7b → select
 .venv/bin/python -m pytest -v            # 자료가 없으면 자료 기반 회귀 테스트는 skip
 ```
 
@@ -59,6 +66,9 @@ uv pip install --python .venv/bin/python -r requirements-optional.txt  # 선택:
 | `src/bhshadow/nested.py` | dynesty 3.2.0 static nested sampling(bound multi, sample rslice, dlogz 0.1, 프로세스 4개, 120초 체크포인트). 사전분포 변환(x 정렬, β₁+β₂ ≤ 0.5 접기), R̂(주기 매개변수 포함), nested 사후에서 시작하는 emcee τ 확인 |
 | `src/bhshadow/s6.py` | 6단계 공통: 결합 fit의 공유 매개변수, 3회 실행 + R̂ + ln Z 범위 + C3/C3′ |
 | `src/bhshadow/closure.py` (6단계 추가) | `drop_colocated=True`면 co-located 국 쌍(2017 AA–AP, JC–SM / 2018 AA–AX, MM–SW)을 함께 포함한 사각형을 빼고 비중복 집합을 다시 고름 |
+| `src/bhshadow/fitting.py` (7단계 변경) | 같은 group의 데이터셋은 매개변수가 같으므로 (u, v)를 이어 붙여 모형을 한 번만 계산한다. χ²는 데이터셋별 계산과 비트 단위로 같다(tests/test_data_stage7.py). G3 한 번 계산 0.82 → 0.58 ms |
+| `src/bhshadow/nested.py` (7단계 추가) | 사전분포 변환 벡터판 `PriorTransform.batch`, `run_nested(slices=…)`, emcee `thin_by`(τ는 단계 단위로 환산) |
+| `src/bhshadow/s7.py` | 7단계 공통: nlive = c·k, 다중 실행 + C1/C2 + C3′/C3″, 단위 입방체 위 차등 진화(`de_fit`), 모드 묶기, C4 |
 
 ## 단계별 처리
 
@@ -102,3 +112,11 @@ uv pip install --python .venv/bin/python -r requirements-optional.txt  # 선택:
 4. **xs-ring**: 데이터셋마다 S1(X1 nested 3회) → S2(XE3) → S3(XE3, intra-site 기선 포함) → S4(XE3L). S2–S4는 nested 1회다.
 5. **2018**: H1–H3은 2단계 emcee 표본 추출기(결과 캐시), 예산은 nested 1회씩이다.
 6. **요약 그림**: 넓은 판 1440 px, 좁은 판 390 px 폭(2배 해상도). headless Chrome으로 1440 px 창과 390 px 폭 상자를 찍어 글자가 잘리거나 겹치지 않는지 확인했다(좁은 판의 긴 라벨 두 개를 줄임).
+
+## 7단계 처리 (추가 분석)
+
+1. **모드 지도(12.1)**: 7개 모형마다 scipy `differential_evolution`을 시드 12개로 돌린다. nested와 같은 단위 입방체와 사전분포 변환을 쓰므로 모든 점이 사전분포 안에 있다(popsize 15, maxiter 2000, tol 1e-6, latin hypercube, 끝에 L-BFGS-B polish). χ² 차 10 또는 d 차 0.5 넘게 다르면 다른 모드로 센다.
+2. **C4**: 각 실행의 χ²_min이 지금까지 모든 방법(DE, 6·7단계 nested 실행)에서 찾은 최소 χ² + 20 안에 있어야 한다.
+3. **래더 A(12.2)**: nlive만 키운다(G1 c = 50 → 150). 둘 다 실패해 멈췄다.
+4. **래더 B(12.7)**: rslice 걸음 수 slices를 기본값 3 + k의 5배로 늘린다. G1 nlive 300 × 5회 → 수렴하면 G3, G2, R2G{n*}; 실패하면 G1 nlive 800 × 5회(수렴해도 G2/G3은 미룸).
+5. **선택(12.4)**: 6단계 M3, E1, E2 실행에 C4를 더하고, 7단계 표(래더 B가 있으면 그것)로 G 모형 행을 바꾼 뒤 11.3 규칙으로 중심 모형, 11.4 규칙으로 σ_model을 다시 계산한다. 중심 모형이 E1이 아니면 예산은 잠정으로 표시한다.
